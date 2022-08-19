@@ -7,22 +7,31 @@ import { BsLink45Deg } from "react-icons/bs";
 import { TiSocialTwitter } from "react-icons/ti";
 import { BiBuildings } from "react-icons/bi";
 
-export default function UserCard() {
+export default function UserCard({ userData }) {
+  const {
+    avatar_url,
+    bio,
+    company,
+    followers,
+    following,
+    location,
+    login,
+    name,
+    public_repos,
+  } = userData;
+  console.log("userData", userData);
   return (
     <div className="usercard-container">
       <div className="usercard-bio">
         <div className="usercard-profile">
           <div className="usercard-image">
-            <img
-              src="https://blog.logrocket.com/wp-content/uploads/2021/07/getting-started-notion-api.png"
-              className="image-profile"
-            />
+            <img src={avatar_url} alt={name} className="image-profile" />
           </div>
           <div className="usercard-infos">
             <div className="usercard-name">
               <div className="octa">
-                <h2>The Octocat</h2>
-                <p>@octocat</p>
+                <h2>{name} </h2>
+                <p>@{login} </p>
               </div>
 
               <div className="join-date">
@@ -30,28 +39,27 @@ export default function UserCard() {
               </div>
             </div>
             <div className="usercard-bio">
-              lorem ipsum dolor sit amet, consect, lorem ipsum dolor sit amet,
-              consect
+              {bio !== null ? bio : "Not avalaible"}
             </div>
             <ul className="usercard-github-data">
               <li>
                 <p>Repos</p>
-                <p>8</p>
+                <p>{public_repos} </p>
               </li>
               <li>
                 <p>Followers</p>
-                <p>8</p>
+                <p>{followers} </p>
               </li>
               <li>
                 <p>Following</p>
-                <p>3938</p>
+                <p>{following} </p>
               </li>
             </ul>
             <ul className="usercard-social-links">
               <div className="city-github">
                 <li>
                   <a href="https://location.com/" alt="twitter"></a>{" "}
-                  <HiOutlineLocationMarker /> San Fancisco
+                  <HiOutlineLocationMarker /> {location}
                 </li>
                 <li>
                   <a href="https://github.com" alt="twitter"></a>{" "}
@@ -65,7 +73,7 @@ export default function UserCard() {
                 </li>
                 <li>
                   <a href="https://twitter.com/" alt="twitter"></a>{" "}
-                  <BiBuildings /> @github
+                  <BiBuildings /> {company}
                 </li>
               </div>
             </ul>

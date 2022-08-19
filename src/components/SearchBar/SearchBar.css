@@ -21,6 +21,10 @@
     color:#FFFFFF;
     font-family:  'Space Mono', monospace,Arial, Helvetica, sans-serif;
 }
+.search-container input[type="text"]{
+    color:#FFFFFF;
+    font: size 20px;
+}
 .search-icon{
     margin-left:10px;
     color:#0079FF;

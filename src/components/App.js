@@ -8,7 +8,7 @@ import UserCard from "./UserCard/UserCard";
 
 function App() {
   const [userData, setUserData] = useState("");
-  const [query, setQuery] = useState("octocat");
+  const [query, setQuery] = useState("dickosmad");
   const fetchUser = () => {
     fetch(`https://api.github.com/users/${query}`)
       .then((user) => user.json())
@@ -16,12 +16,12 @@ function App() {
   };
   useEffect(() => {
     fetchUser();
-  }, []);
+  }, [query]);
   console.log(userData);
   return (
     <div className="app-container">
       <Navbar />
-      <SearchBar query={query} setQuery={setQuery} />
+      <SearchBar query={query} setQuery={setQuery} getData={fetchUser} />
       <UserCard userData={userData} />
     </div>
   );

@@ -5,7 +5,7 @@ import React, { useEffect, useMemo } from "react";
 import { FiSearch } from "react-icons/fi";
 import debounce from "../helpers";
 
-export default function SearchBar({ query, setQuery }) {
+export default function SearchBar({ query, setQuery, getData }) {
   const changeHandler = (evt) => {
     setQuery(evt.target.value);
   };
@@ -29,7 +29,7 @@ export default function SearchBar({ query, setQuery }) {
         type="text"
       />
       {query === "" ? <p className="no-results">No results</p> : null}
-      <button className="search-btn" type="button">
+      <button onClick={() => getData()} className="search-btn" type="button">
         Search
       </button>
     </div>
