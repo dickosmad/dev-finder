@@ -26,6 +26,9 @@
     color:#0079FF;
    
 }
+.no-results{
+    color: red;
+}
 .search-btn{
     background-color:#0079FF;
     color:#FFFFFF;
