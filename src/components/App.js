@@ -2,7 +2,7 @@ import "./App.css";
 
 import React, { useState, useEffect } from "react";
 
-import Navbar from "./Navbar";
+import Header from "./Header";
 import SearchBar from "./SearchBar";
 import UserCard from "./UserCard/UserCard";
 
@@ -11,8 +11,8 @@ function App() {
   const [query, setQuery] = useState("dickosmad");
   const fetchUser = () => {
     fetch(`https://api.github.com/users/${query}`)
-      .then((user) => user.json())
-      .then((response) => setUserData(response));
+      .then((response) => response.json())
+      .then((user) => setUserData(user));
   };
   useEffect(() => {
     fetchUser();
@@ -20,7 +20,7 @@ function App() {
   console.log(userData);
   return (
     <div className="app-container">
-      <Navbar />
+      <Header />
       <SearchBar query={query} setQuery={setQuery} getData={fetchUser} />
       <UserCard userData={userData} />
     </div>

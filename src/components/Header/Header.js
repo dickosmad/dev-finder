@@ -1,9 +1,9 @@
-import "./Navbar.css";
+import "./Header.css";
 
 import React from "react";
 import { MdLightMode } from "react-icons/md";
 
-export default function Navbar() {
+export default function Header() {
   return (
     <div className="navbar-container">
       <h2 className="navbar-title">devfinder</h2>
