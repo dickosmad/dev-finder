@@ -1,22 +1,14 @@
 import "./SearchBar.css";
 
-import React, { useEffect, useMemo } from "react";
+import React from "react";
 
 import { FiSearch } from "react-icons/fi";
-import debounce from "../helpers";
 
 export default function SearchBar({ query, setQuery, getData }) {
   const changeHandler = (evt) => {
     setQuery(evt.target.value);
   };
 
-  const debounceChangeHandler = useMemo(() => {
-    debounce(changeHandler, 300);
-  }, []);
-
-  useEffect(() => {
-    return () => debounceChangeHandler.cancel();
-  }, []);
   return (
     <div className="search-container">
       <span className="search-icon">
@@ -24,7 +16,7 @@ export default function SearchBar({ query, setQuery, getData }) {
       </span>
       <input
         className="search-input"
-        onChange={debounceChangeHandler}
+        onChange={changeHandler}
         placeholder="Search Github Username..."
         type="text"
       />

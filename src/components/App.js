@@ -16,7 +16,7 @@ function App() {
   };
   useEffect(() => {
     fetchUser();
-  }, [query]);
+  }, []);
   console.log(userData);
   return (
     <div className="app-container">
