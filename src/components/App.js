@@ -9,7 +9,7 @@ import Loading from "./Loading/Loading";
 
 function App() {
   const [userData, setUserData] = useState("");
-  const [userName, setUserName] = useState("dickosmad");
+  const [userName, setUserName] = useState("octocat");
   const fetchUser = () => {
     fetch(`https://api.github.com/users/${userName}`)
       .then((response) => response.json())
