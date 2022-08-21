@@ -4,9 +4,9 @@ import React from "react";
 
 import { FiSearch } from "react-icons/fi";
 
-export default function SearchBar({ query, setQuery, getData }) {
+export default function SearchBar({ userName, setUserName, onSearch }) {
   const changeHandler = (evt) => {
-    setQuery(evt.target.value);
+    setUserName(evt.target.value);
   };
 
   return (
@@ -20,8 +20,8 @@ export default function SearchBar({ query, setQuery, getData }) {
         placeholder="Search Github Username..."
         type="text"
       />
-      {query === "" ? <p className="no-results">No results</p> : null}
-      <button onClick={() => getData()} className="search-btn" type="button">
+      {userName === "" ? <p className="no-results">No results</p> : null}
+      <button onClick={() => onSearch()} className="search-btn" type="button">
         Search
       </button>
     </div>
