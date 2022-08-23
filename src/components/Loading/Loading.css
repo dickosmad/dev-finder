@@ -36,21 +36,13 @@
     -webkit-animation-timing-function: linear;
     }
   
-  box {
+  .box {
     height: 89px;
     width: 480px;
   }
   
- /* .loading-container div {
-    display: inline-flex;
-    flex-direction: column;
-    width:100%; 
-    margin-left: 25px;
-    margin-top: 15px;
-    vertical-align: top; 
-  } */
   
-  lines {
+  .lines {
     height: 15px;
     margin-top: 10px;
     width: 200px; 
@@ -58,7 +50,7 @@
   .loading-divider{
     display:flex;
   }
-  .loading-container photo {
+  .loading-container .photo {
     display: block!important;
     width: 117px; 
     height: 117px; 

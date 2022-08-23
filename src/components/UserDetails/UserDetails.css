@@ -1,46 +1,43 @@
-.usercard-container{
-    
-}
-.usercard-bio{
+
+.user-details-container{
     display: flex;
     align-items: center;
     padding: 30px;
     border-radius: 20px;
     background-color: #1E2A47 ;
-    color:#FFFFFF
-    /* justify-content:center; */
+    color:#FFFFFF;
 }
-.usercard-profile{
+.user-details-profile{
     display: flex;
     gap: 20px;
     width: 100%;
     
 }
-.usercard-image img{
+.user-details-image img{
     width: 117px;
     height: 117px;
     border-radius: 100%;
 }
-.usercard-infos{
+.user-details-infos{
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap:20px;
     flex:2;  
 }
-.usercard-name{
+.user-login-infos{
     display: flex;
     justify-content: space-between;
 }
 
-.usercard-name .octa p{
+.user-login-infos .profile-pseudoname p{
     color :#0079FF;
 }
-.usercard-name .join-date p{
+.user-login-infos .user-join-date p{
     font-size:13px;
 }
 
-.usercard-github-data{
+.user-github-data{
     display: flex;
     padding: 14px;
     border-radius: 15px;
@@ -49,16 +46,16 @@
     justify-content: space-around;
     background: black;
 }
-.usercard-social-links{
+.user-social-links{
     display: flex;
     align-items: center;
     justify-content:space-between;
 }
 
-.usercard-social-links li{
+.user-social-links li{
     margin:15px 0px;
 }
-.usercard-social-links a:hover{
+.user-social-links div li a:hover{
     text-decoration:underline;
     cursor: pointer;
 }

@@ -5,8 +5,15 @@
     color:#FFFFFF;
     width:100%;
 }
+
+/* .navbar-title{
+    color:#222731;
+} */
 .navbar-theme{
     display:flex;
     gap:10px;
     align-items:center;
+}
+.navbar-theme h4{
+    color:#697C9A;
 }
