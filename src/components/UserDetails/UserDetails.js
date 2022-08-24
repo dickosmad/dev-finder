@@ -9,7 +9,7 @@ import { BsLink45Deg } from "react-icons/bs";
 import { TiSocialTwitter } from "react-icons/ti";
 import { BiBuildings } from "react-icons/bi";
 
-export default function UserDetails({ userData }) {
+export default function UserDetails({ userData, styles, isDark }) {
   const {
     avatar_url,
     bio,
@@ -26,7 +26,21 @@ export default function UserDetails({ userData }) {
   } = userData;
   console.log("userData", userData);
   return (
-    <div className="user-details-container">
+    <div
+      style={{
+        backgroundColor: `${
+          isDark
+            ? styles.userDetails_dark_color.backgroundColor
+            : styles.userDetails_light_color.backgroundColor
+        } `,
+        color: `${
+          isDark
+            ? styles.userDetails_dark_color.color
+            : styles.userDetails_light_color.color
+        } `,
+      }}
+      className="user-details-container"
+    >
       <div className="user-details-profile">
         <div className="user-details-image">
           <img src={avatar_url} alt={name} className="image-profile" />
@@ -78,7 +92,21 @@ export default function UserDetails({ userData }) {
               </span>
             )}
           </div>
-          <ul className="user-github-data">
+          <ul
+            style={{
+              backgroundColor: `${
+                isDark
+                  ? styles.userDetails_github_data_dark_color.backgroundColor
+                  : styles.userDetails_github_data_light_color.backgroundColor
+              } `,
+              color: `${
+                isDark
+                  ? styles.userDetails_github_data_dark_color.color
+                  : styles.userDetails_github_data_light_color.color
+              } `,
+            }}
+            className="user-github-data"
+          >
             <li>
               <p>Repos</p>
               <h4>{public_repos} </h4>
