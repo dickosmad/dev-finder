@@ -6,6 +6,7 @@ import Header from "./Header";
 import SearchBar from "./SearchBar";
 import UserDetails from "./UserDetails/UserDetails";
 import Loading from "./Loading/Loading";
+import themeStyles from "#src/utils";
 
 const LIGHT_AND_DARK_STYLES = {
   body_light_color: {
@@ -48,6 +49,8 @@ const LIGHT_AND_DARK_STYLES = {
   },
 };
 
+console.log("styles", themeStyles);
+
 function App() {
   const [userData, setUserData] = useState("");
   const [userName, setUserName] = useState("octocat");
@@ -62,11 +65,11 @@ function App() {
   }, []);
   useEffect(() => {
     document.body.style.backgroundColor = isDark
-      ? LIGHT_AND_DARK_STYLES.body_dark_color.backgroundColor
-      : LIGHT_AND_DARK_STYLES.body_light_color.backgroundColor;
+      ? themeStyles.body_dark_color.backgroundColor
+      : themeStyles.body_light_color.backgroundColor;
     document.body.style.color = isDark
-      ? LIGHT_AND_DARK_STYLES.body_dark_color.color
-      : LIGHT_AND_DARK_STYLES.body_light_color.color;
+      ? themeStyles.body_dark_color.color
+      : themeStyles.body_light_color.color;
   }, [isDark]);
   const toggleTheme = () => {
     setIsDark(!isDark);
@@ -85,7 +88,7 @@ function App() {
         userName={userName}
         isDark={isDark}
         toggleTheme={toggleTheme}
-        styles={LIGHT_AND_DARK_STYLES}
+        styles={themeStyles}
       />
       {userData === undefined || userData === "" ? (
         <Loading />

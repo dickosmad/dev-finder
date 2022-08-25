@@ -17,7 +17,7 @@
     flex:3
 }
 .search-container input::placeholder{
-    color:#FFFFFF;
+    color:#7F7F7F;
     font-family:  'Space Mono', monospace,Arial, Helvetica, sans-serif;
 }
 .search-container input[type="text"]{
@@ -31,6 +31,7 @@
 }
 .no-results{
     color: #F74646;
+    margin-right: 10px;
 }
 .search-btn{
     background-color:#0079FF;

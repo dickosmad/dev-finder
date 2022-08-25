@@ -28,13 +28,15 @@
 .user-login-infos{
     display: flex;
     justify-content: space-between;
+    gap: 10rem;
 }
 
 .user-login-infos .profile-pseudoname p{
     color :#0079FF;
 }
-.user-login-infos .user-join-date p{
+.user-login-infos .user-join-date {
     font-size:13px;
+    padding-top: 10px;
 }
 
 .user-github-data{
@@ -58,4 +60,16 @@
 .user-social-links div li a:hover{
     text-decoration:underline;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 680px){
+    .user-login-infos{
+        gap: 2rem;
+    }
+}
+@media only screen and (max-width: 680px){
+    .user-login-infos{
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
 }
