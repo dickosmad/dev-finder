@@ -1,4 +1,4 @@
-import "./UserCard.css";
+import "./UserDetails.css";
 
 import React from "react";
 
@@ -7,7 +7,7 @@ import { BsLink45Deg } from "react-icons/bs";
 import { TiSocialTwitter } from "react-icons/ti";
 import { BiBuildings } from "react-icons/bi";
 
-export default function UserCard({ userData }) {
+export default function UserDetails({ userData }) {
   const {
     avatar_url,
     bio,
@@ -35,7 +35,7 @@ export default function UserCard({ userData }) {
               </div>
 
               <div className="join-date">
-                <p>Joined 25 Jan 2011</p>
+                <date>Joined 25 Jan 2011</date>
               </div>
             </div>
             <div className="usercard-bio">

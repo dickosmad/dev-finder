@@ -4,13 +4,14 @@ import React, { useState, useEffect } from "react";
 
 import Header from "./Header";
 import SearchBar from "./SearchBar";
-import UserCard from "./UserCard/UserCard";
+import UserDetails from "./UserDetails/UserDetails";
+import Loading from "./Loading/Loading";
 
 function App() {
   const [userData, setUserData] = useState("");
-  const [query, setQuery] = useState("dickosmad");
+  const [userName, setUserName] = useState("dickosmad");
   const fetchUser = () => {
-    fetch(`https://api.github.com/users/${query}`)
+    fetch(`https://api.github.com/users/${userName}`)
       .then((response) => response.json())
       .then((user) => setUserData(user));
   };
@@ -21,8 +22,16 @@ function App() {
   return (
     <div className="app-container">
       <Header />
-      <SearchBar query={query} setQuery={setQuery} getData={fetchUser} />
-      <UserCard userData={userData} />
+      <SearchBar
+        onSearch={fetchUser}
+        setUserName={setUserName}
+        userName={userName}
+      />
+      {userData === undefined || userData === "" ? (
+        <Loading />
+      ) : (
+        <UserDetails userData={userData} />
+      )}
     </div>
   );
 }
