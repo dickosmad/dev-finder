@@ -1,0 +1,55 @@
+.usercard-container{
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #1E2A47 ;
+    color:#FFFFFF
+}
+.usercard-profile{
+    display: flex;
+    gap: 20px;
+}
+.usercard-image img{
+    width: 117px;
+    height: 117px;
+    border-radius: 100%;
+}
+.usercard-infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;  
+}
+.usercard-name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.usercard-name .octa p{
+    color :#0079FF;
+}
+.usercard-name .join-date p{
+    font-size:13px;
+}
+.usercard-bio{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.usercard-github-data{
+    display: flex;
+    padding: 14px;
+    border-radius: 15px;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    background: black;
+}
+.usercard-social-links{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.usercard-social-links li{
+    margin:15px 0px;
+}
