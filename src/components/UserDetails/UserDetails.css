@@ -58,3 +58,7 @@
 .usercard-social-links li{
     margin:15px 0px;
 }
+.usercard-social-links a:hover{
+    text-decoration:underline;
+    cursor: pointer;
+}
