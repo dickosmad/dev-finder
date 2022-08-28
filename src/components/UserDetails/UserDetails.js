@@ -24,7 +24,6 @@ export default function UserDetails({ userData }) {
     public_repos,
     twitter_username,
   } = userData;
-  console.log("userData", userData);
   return (
     <div className="usercard-container">
       <div className="usercard-bio">
